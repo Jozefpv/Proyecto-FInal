@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import imagenes from "./imagenes"
 
 
 const ApartmentDetail = () => {
@@ -15,7 +16,7 @@ const ApartmentDetail = () => {
         <div style={{padding:'3%'}}>
             {informacion && (
                 <div style={{display:'flex', gap:'15px'}}>
-                    <img src="https://cdn2.hometogo.net/small/v1/d28/96a/61235ace08837962ef8467eee0.jpg"></img>
+                    <img src={imagenes[id]}></img>
                     <div>
                         <h3>{informacion.nombre}</h3>
                         <p>Dirección: {informacion.direccion}</p>
